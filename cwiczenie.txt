@@ -1,1 +1,3 @@
 Ćwiczymy używanie gita.
+
+ Niedługo będziemy ekspertami gita
