@@ -98,5 +98,15 @@ void main() {
 
     print(slowo4.toUpperCase() + "\n");
 
+    // Zad. 10
+    print("Zadanie 10\n");
+
+    print("Podaj promień koła: \n");
+    int promien = scanner.nextInt();
+
+    double pole = Math.PI * promien * promien;
+
+    print("Pole koła wynosi: " + pole + "\n");
+
     // Zadanie wykonane przez Jakuba Bujakiewicza | Wszelkie prawa autorskie
 }
