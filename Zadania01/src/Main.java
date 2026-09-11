@@ -58,15 +58,28 @@ void main() {
     String slowo2;
     String slowo3;
 
-    print("Podaj pierwsze słowo: ");
+    print("Podaj pierwsze słowo: \n");
     slowo1 = scanner.next();
 
-    print("Podaj drugie słowo: ");
+    print("Podaj drugie słowo: \n");
     slowo2 = scanner.next();
 
-    print("Podaj trzecie słowo: ");
+    print("Podaj trzecie słowo: \n");
     slowo3 = scanner.next();
 
-    print(slowo3 + ", " + slowo2 + ", " + slowo1);
+    print(slowo3 + ", " + slowo2 + ", " + slowo1 + "\n");
+
+// Zad 7
+    print("Podaj słowo: \n");
+    String slowo = scanner.next();
+
+    print("Liczba znaków: " + slowo.length() + "\n");
+
+
+// Zad 8
+    int x = 5;
+    int y = 2;
+    double wynik = (double) x / y;
+    System.out.println(wynik+"\n");
 
 }
