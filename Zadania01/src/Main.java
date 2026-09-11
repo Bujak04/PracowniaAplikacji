@@ -12,5 +12,6 @@ void main() {
     print(imie);
     print(rokUrodzenia);
     print(liczba);
-    
+
+    print("Mam na imię " + imie + ", mam " + (2026 - rokUrodzenia) + " lat i będę pisać maturę za " + liczba + " roku.");
 }
