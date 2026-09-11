@@ -7,7 +7,7 @@ void main() {
     print("Bartek");
     print("Kasia");
 
-   // Zad. 2
+    // Zad. 2
     String imie = "Jakub";
     int rokUrodzenia = 2007;
     double liczba = 0.66;
@@ -30,6 +30,22 @@ void main() {
     double fahrenheit = 1.8 * stopnie + 32.0;
 
     print("Temperatura w stopniach Fahrenheita: " + fahrenheit);
-}
 
-    
+    // Zad. 5
+    double bok1;
+    double bok2;
+    double bok3;
+
+    print("Podaj pierwszy bok trójkąta: ");
+    bok1 = scanner.nextDouble();
+
+    print("Podaj drugi bok trójkąta: ");
+    bok2 = scanner.nextDouble();
+
+    print("Podaj trzeci bok trójkąta: ");
+    bok3 = scanner.nextDouble();
+
+    double obwod = bok1 + bok2 + bok3;
+
+    print("Obwód trójkąta wynosi: " + obwod);
+}
