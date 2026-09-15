@@ -1,13 +1,103 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+  //1
+  Scanner sc = new Scanner(System.in);
+  System.out.print("Podaj liczbe: ");
+  int liczba = sc.nextInt();
+  if(liczba%3==0){
+    System.out.println("Twoja Liczba jest podzielna przez 3");
+  }else{
+    System.out.println("Twoja liczba nie jest podzielna przez 3");
+  }
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
+  //2
+  Scanner sc2 = new Scanner(System.in);
+
+  System.out.print("Podaj 1 bok trójkąta: ");
+  int bok1 = sc2.nextInt();
+
+  System.out.print("Podaj 2 bok trójkąta: ");
+  int bok2 = sc2.nextInt();
+
+  System.out.print("Podaj 3 bok trójkąta: ");
+  int bok3 = sc2.nextInt();
+
+  if(bok1 + bok2 > bok3 && bok1 + bok3 > bok2 && bok2 + bok3 > bok1){
+    System.out.println("Z twoich liczb można zbudować trójkąt");
+  }else{
+    System.out.println("Z twoich liczb niemożna zbudować trójkąta");
+  }
+
+  //3
+  Scanner sc3 = new Scanner(System.in);
+
+  System.out.print("Podaj liczbe: ");
+  int a = sc3.nextInt();
+
+  System.out.print("Podaj liczbe: ");
+  int b = sc3.nextInt();
+
+  if(a>b){
+    System.out.println("Większe jest: "+a);
+  }else if(b>a){
+    System.out.println("Większe jest: "+b);
+  }
+
+  //4
+  Scanner sc4 = new Scanner(System.in);
+
+  System.out.print("Podaj liczbe: ");
+  int a2 = sc4.nextInt();
+
+  System.out.print("Podaj liczbe: ");
+  int b2 = sc4.nextInt();
+
+  System.out.print("Podaj liczbe: ");
+  int c2 = sc4.nextInt();
+
+  int najwieksza = a2;
+
+  if(b2>najwieksza){
+    najwieksza = b2;
+  }
+  if(c2>najwieksza){
+    najwieksza = c2;
+  }
+
+  System.out.println("Najwieksza liczba to " + najwieksza);
+
+  //5
+  Scanner sc5 = new Scanner(System.in);
+
+  System.out.print("Podaj numer miesiaca: ");
+  int miesiac = sc5.nextInt();
+
+  String nazwa = switch(miesiac){
+    case 1 -> "Styczen";
+    case 2 -> "Luty";
+    case 3 -> "Marzec";
+    case 4 -> "Kwiecien";
+    case 5 -> "Maj";
+    case 6 -> "Czerwiec";
+    case 7 -> "Lipiec";
+    case 8 -> "Sierpien";
+    case 9 -> "Wrzesien";
+    case 10 -> "Pazdziernik";
+    case 11 -> "Listopad";
+    case 12 -> "Grudzien";
+    default -> "Nieprawidlowy numer miesiaca";
+  };
+  System.out.println(nazwa);
+
+  //6
+  Scanner sc6 = new Scanner(System.in);
+
+  System.out.print("Podaj inie: ");
+  String imie = sc6.next();
+
+  String mojeImie = "Jakub";
+  if(imie.equals(mojeImie)){
+    System.out.println("Masz takie samo imie jak ja");
+  }else{
+    System.out.println("Masz inne imie niż ja");
   }
 }
