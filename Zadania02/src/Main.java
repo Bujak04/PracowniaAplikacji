@@ -100,4 +100,17 @@ void main() {
   }else{
     System.out.println("Masz inne imie niż ja");
   }
+
+
+
+//7
+Scanner sc7 = new Scanner(System.in);
+
+System.out.print("Podaj swoj wiek: ");
+int wiek = sc7.nextInt();
+
+boolean pelnoletni = wiek >= 18 ? true : false;
+
+System.out.println("Czy jestes pelnoletni? " + pelnoletni);
+
 }
