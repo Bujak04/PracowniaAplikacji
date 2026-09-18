@@ -125,4 +125,25 @@ System.out.println("Czy jestes pelnoletni? " + pelnoletni);
     System.out.println("Podany rok nie jest przestepny");
   }
 
+  //9
+  Scanner sc9 = new Scanner(System.in);
+
+  System.out.print("Podaj swoja wage w kg: ");
+  double waga = sc9.nextDouble();
+
+  System.out.print("Podaj swoj wzrost w metrach: ");
+  double wzrost = sc9.nextDouble();
+
+  double bmi = waga / (wzrost * wzrost);
+
+  System.out.println("Twoje BMI wynosi: " + bmi);
+
+  if(bmi < 18.5){
+    System.out.println("Niedowaga");
+  }else if(bmi <= 24.9){
+    System.out.println("Waga prawidlowa");
+  }else{
+    System.out.println("Nadwaga");
+  }
+
 }
