@@ -189,4 +189,43 @@ System.out.println("Czy jestes pelnoletni? " + pelnoletni);
 
   System.out.println("Miesieczna rata wynosi: " + rata + " zl");
 
+  //11
+  Scanner sc11 = new Scanner(System.in);
+
+  System.out.println("Prosty kalkulator");
+
+  System.out.print("Podaj pierwsza liczbe: ");
+  double liczba1 = sc11.nextDouble();
+
+  System.out.print("Podaj symbol operacji (+, -, *, /): ");
+  char operacja = sc11.next().charAt(0);
+
+  System.out.print("Podaj druga liczbe: ");
+  double liczba2 = sc11.nextDouble();
+
+  switch(operacja){
+    case '+':
+      System.out.println("Wynik: " + (liczba1 + liczba2));
+      break;
+
+    case '-':
+      System.out.println("Wynik: " + (liczba1 - liczba2));
+      break;
+
+    case '*':
+      System.out.println("Wynik: " + (liczba1 * liczba2));
+      break;
+
+    case '/':
+      if(liczba2 == 0){
+        System.out.println("Nie mozna dzielic przez zero");
+      }else{
+        System.out.println("Wynik: " + (liczba1 / liczba2));
+      }
+      break;
+
+    default:
+      System.out.println("Bledny symbol operacji");
+  }
+
 }
