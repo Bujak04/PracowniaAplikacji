@@ -113,4 +113,16 @@ boolean pelnoletni = wiek >= 18 ? true : false;
 
 System.out.println("Czy jestes pelnoletni? " + pelnoletni);
 
+//8
+  Scanner sc8 = new Scanner(System.in);
+
+  System.out.print("Podaj rok: ");
+  int rok = sc8.nextInt();
+
+  if((rok % 4 == 0 && rok % 100 != 0) || rok % 400 == 0){
+    System.out.println("Podany rok jest przestepny");
+  }else{
+    System.out.println("Podany rok nie jest przestepny");
+  }
+
 }
