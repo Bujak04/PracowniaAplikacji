@@ -188,6 +188,44 @@ public class Main {
             System.out.println("Silnia liczby " + liczba8 + " wynosi: " + silnia);
         }
 
+        // ZADANIE 9
+
+        System.out.println("\nPodaj słowo:");
+        String slowo = scanner.next();
+
+        String odwrocone = "";
+
+        for (int i = slowo.length() - 1; i >= 0; i--) {
+            odwrocone += slowo.charAt(i);
+        }
+
+        if (slowo.equals(odwrocone)) {
+            System.out.println("Podane słowo jest palindromem.");
+        } else {
+            System.out.println("Podane słowo nie jest palindromem.");
+        }
+
+        // ZADANIE 10
+
+        System.out.println("\nZADANIE 10:");
+
+        petlaGlowna:
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 != 0) {
+                continue;
+            }
+
+            for (int j = 1; j <= 10; j++) {
+                System.out.print(j + " ");
+
+                if (j > i) {
+                    continue petlaGlowna;
+                }
+            }
+
+            System.out.println();
+        }
+
         scanner.close();
     }
 }
