@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -92,6 +93,61 @@ public class Main {
             System.out.println("Największa liczba: " + najwieksza);
             System.out.println("Suma najmniejszej i największej: " + (najmniejsza + najwieksza));
             System.out.println("Średnia arytmetyczna: " + srednia);
+        }
+
+        // ZADANIE 5
+
+        Random random = new Random();
+        int wylosowana = random.nextInt(100) + 1;
+        int zgadnieta;
+
+        System.out.println("\nZgadnij liczbę od 1 do 100:");
+
+        do {
+            zgadnieta = scanner.nextInt();
+
+            if (zgadnieta > wylosowana) {
+                System.out.println("Podałeś za dużą wartość");
+            } else if (zgadnieta < wylosowana) {
+                System.out.println("Podałeś za małą wartość");
+            } else {
+                System.out.println("Gratulacje");
+            }
+        } while (zgadnieta != wylosowana);
+
+        // ZADANIE 6
+
+        System.out.println("\nPodaj znak wypełnienia prostokąta:");
+        char znak = scanner.next().charAt(0);
+
+        System.out.println("Podaj pozycję lewego górnego rogu x:");
+        int x = scanner.nextInt();
+
+        System.out.println("Podaj pozycję lewego górnego rogu y:");
+        int y = scanner.nextInt();
+
+        System.out.println("Podaj długość boku a:");
+        int a = scanner.nextInt();
+
+        System.out.println("Podaj długość boku b:");
+        int b = scanner.nextInt();
+
+        System.out.println("\nProstokąt:");
+
+        for (int i = 1; i < y; i++) {
+            System.out.println();
+        }
+
+        for (int i = 0; i < b; i++) {
+            for (int j = 1; j < x; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 0; j < a; j++) {
+                System.out.print(znak);
+            }
+
+            System.out.println();
         }
 
         scanner.close();
