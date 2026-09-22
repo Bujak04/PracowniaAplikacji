@@ -150,6 +150,44 @@ public class Main {
             System.out.println();
         }
 
+        // ZADANIE 7
+
+        System.out.println("\nPodaj wysokość choinki:");
+        int wysokosc = scanner.nextInt();
+
+        if (wysokosc <= 0) {
+            System.out.println("Wysokość musi być większa od 0.");
+        } else {
+            for (int i = 1; i <= wysokosc; i++) {
+                for (int j = 1; j <= wysokosc - i; j++) {
+                    System.out.print(" ");
+                }
+
+                for (int j = 1; j <= 2 * i - 1; j++) {
+                    System.out.print("*");
+                }
+
+                System.out.println();
+            }
+        }
+
+        // ZADANIE 8
+
+        System.out.println("\nPodaj liczbę do obliczenia silni:");
+        int liczba8 = scanner.nextInt();
+
+        if (liczba8 < 0) {
+            System.out.println("Silnia jest zdefiniowana dla liczb nieujemnych.");
+        } else {
+            long silnia = 1;
+
+            for (int i = 1; i <= liczba8; i++) {
+                silnia *= i;
+            }
+
+            System.out.println("Silnia liczby " + liczba8 + " wynosi: " + silnia);
+        }
+
         scanner.close();
     }
 }
