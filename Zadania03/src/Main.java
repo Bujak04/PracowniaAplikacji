@@ -39,6 +39,61 @@ public class Main {
             }
         }
 
+        // ZADANIE 3
+
+        System.out.println("\nPodawaj liczby, aby zakończyć wpisz 0:");
+
+        int suma = 0;
+        int liczba3;
+
+        do {
+            liczba3 = scanner.nextInt();
+            suma += liczba3;
+        } while (liczba3 != 0);
+
+        System.out.println("Suma podanych liczb: " + suma);
+
+        // ZADANIE 4
+
+        System.out.println("\nPodawaj liczby, aby zakończyć wpisz 0:");
+
+        int liczba4 = scanner.nextInt();
+
+        if (liczba4 == 0) {
+            System.out.println("Nie podano żadnych liczb.");
+        } else {
+            int najmniejsza = liczba4;
+            int najwieksza = liczba4;
+            int suma4 = liczba4;
+            int ilosc = 1;
+
+            while (true) {
+                liczba4 = scanner.nextInt();
+
+                if (liczba4 == 0) {
+                    break;
+                }
+
+                if (liczba4 < najmniejsza) {
+                    najmniejsza = liczba4;
+                }
+
+                if (liczba4 > najwieksza) {
+                    najwieksza = liczba4;
+                }
+
+                suma4 += liczba4;
+                ilosc++;
+            }
+
+            double srednia = (double) suma4 / ilosc;
+
+            System.out.println("Najmniejsza liczba: " + najmniejsza);
+            System.out.println("Największa liczba: " + najwieksza);
+            System.out.println("Suma najmniejszej i największej: " + (najmniejsza + najwieksza));
+            System.out.println("Średnia arytmetyczna: " + srednia);
+        }
+
         scanner.close();
     }
 }
