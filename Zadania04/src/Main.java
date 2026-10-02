@@ -203,4 +203,37 @@ void main() {
     for (int i = liczby8.length - 1; i >= 0; i--) {
         System.out.print(liczby8[i] + " ");
     }
+
+    // Zadanie 9
+    int[] liczby9 = new int[20];
+
+    // Wypełnienie tablicy liczbami od 1 do 10
+    for (int i = 0; i < liczby9.length; i++) {
+        liczby9[i] = (int) (Math.random() * 10) + 1;
+    }
+
+    System.out.println("\nZadanie 9:");
+
+    // Wyświetlenie tablicy
+    System.out.println("Tablica:");
+
+    for (int liczba : liczby9) {
+        System.out.print(liczba + " ");
+    }
+
+    System.out.println();
+
+    // Liczenie wystąpień każdej liczby
+    for (int liczba = 1; liczba <= 10; liczba++) {
+        int ileRazy = 0;
+
+        for (int element : liczby9) {
+            if (element == liczba) {
+                ileRazy++;
+            }
+        }
+
+        System.out.println("Liczba " + liczba + " występuje " + ileRazy + " razy.");
+    }
+
 }
