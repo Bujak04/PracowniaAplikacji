@@ -33,6 +33,16 @@ void main() {
     // Zadanie 10
     IO.println("Czy kajak jest palindromem? "
             + isPalindrome("kajak"));
+
+    // Zadanie 11
+    int[] liczby = {1, 7, 20, 100};
+    IO.println("Suma elementów tablicy: "
+            + sumArray(liczby));
+
+    // Zadanie 12
+    int liczbaLiterA = zliczWystapienia("Ala ma kota", 'a');
+    IO.println("Liczba wystąpień litery 'a': "
+            + liczbaLiterA);
 }
 
 
@@ -111,4 +121,32 @@ static boolean isPalindrome(String text) {
     }
 
     return true;
+}
+
+
+// Zadanie 11
+static int sumArray(int[] numbers) {
+
+    int suma = 0;
+
+    for (int number : numbers) {
+        suma += number;
+    }
+
+    return suma;
+}
+
+
+// Zadanie 12
+static int zliczWystapienia(String text, char znak) {
+
+    int licznik = 0;
+
+    for (int i = 0; i < text.length(); i++) {
+        if (text.charAt(i) == znak) {
+            licznik++;
+        }
+    }
+
+    return licznik;
 }
